@@ -21,6 +21,6 @@ public:
 private:
     std::map<SDL_Scancode, bool> _heldKeys;
     std::map<SDL_Scancode, bool> _pressedKeys;
-    std::map<SDL_Scancode, bool> _releaseKeys;
+    std::map<SDL_Scancode, bool> _releasedKeys;
 };
 #endif //CAVESTORY_INPUT_H

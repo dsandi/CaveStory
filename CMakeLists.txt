@@ -11,7 +11,7 @@ include_directories(${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIR} ${CaveStory_SO
 
 configure_file(content/sprites/MyChar.png content/sprites/MyChar.png COPYONLY)
 
-set(SOURCE_FILES source/src/main.cpp source/src/graphics.cpp source/headers/graphics.h source/headers/game.h source/src/game.cpp source/headers/input.h source/src/input.cpp source/headers/sprite.h source/src/sprite.cpp source/headers/globals.h source/headers/animated_sprite.h source/src/animated_sprite.cpp)
+set(SOURCE_FILES source/src/main.cpp source/src/graphics.cpp source/headers/graphics.h source/headers/game.h source/src/game.cpp source/headers/input.h source/src/input.cpp source/headers/sprite.h source/src/sprite.cpp source/headers/globals.h source/headers/animated_sprite.h source/src/animated_sprite.cpp source/headers/player.h source/src/player.cpp)
 add_executable(CaveStory ${SOURCE_FILES})
 
 target_link_libraries(CaveStory ${SDL2_LIBRARY} ${SDL2IMAGE_LIBRARY})

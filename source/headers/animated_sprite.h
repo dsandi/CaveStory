@@ -29,7 +29,6 @@ public:
 
     void draw(Graphics &graphics, int x, int y);
 
-    virtual void setupAnimations();
 
 protected:
     double _timeToUpdate;
@@ -44,7 +43,9 @@ protected:
 
     void setVisible(bool visible);
 
-    virtual void animationDone(std::string currentAnimation);
+    virtual void animationDone(std::string currentAnimation) = 0;
+
+    virtual void setupAnimations() = 0;
 
 private:
     std::map<std::string, std::vector<SDL_Rect> > _animations;
