@@ -7,6 +7,7 @@
 
 #include <map>
 #include <string>
+#include "SDL.h"
 
 /* Graphics Class
  * Handles everything related to graphics
