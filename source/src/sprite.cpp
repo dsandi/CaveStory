@@ -7,9 +7,7 @@
 #include "sprite.h"
 #include "graphics.h"
 
-Sprite::Sprite() {
-
-}
+Sprite::Sprite() {}
 
 Sprite::Sprite(Graphics &graphics, const std::string &filePath, int sourceX, int sourceY, int width, int height,
                float posX, float posY) :
@@ -28,7 +26,7 @@ Sprite::Sprite(Graphics &graphics, const std::string &filePath, int sourceX, int
 
 }
 
-Sprite::~Sprite() { }
+Sprite::~Sprite() {}
 
 void Sprite::draw(Graphics &graphics, int x, int y) {
     SDL_Rect destinationRectangle = { x, y, this->_sourceRect.w * globals::SPRITE_SCALE,
@@ -36,5 +34,4 @@ void Sprite::draw(Graphics &graphics, int x, int y) {
     graphics.blitSurface(this->_spriteSheet, &this->_sourceRect, &destinationRectangle);
 }
 
-
-void Sprite::update() { }
+void Sprite::update() {}

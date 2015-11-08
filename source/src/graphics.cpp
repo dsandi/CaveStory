@@ -10,17 +10,19 @@
  * Handles everything related to graphics
  */
 
-Graphics::Graphics(){
-    SDL_CreateWindowAndRenderer(globals::SCREEN_WIDTH,globals::SCREEN_HEIGHT, 0, &this->_window, &this->_renderer);
-    SDL_SetWindowTitle(this->_window, "CaveStory");
+
+Graphics::Graphics() {
+    SDL_CreateWindowAndRenderer(globals::SCREEN_WIDTH, globals::SCREEN_HEIGHT, 0, &this->_window, &this->_renderer);
+    SDL_SetWindowTitle(this->_window, "Cavestory");
 }
 
-Graphics::~Graphics(){
+Graphics::~Graphics() {
     SDL_DestroyWindow(this->_window);
+    SDL_DestroyRenderer(this->_renderer);
 }
 
 SDL_Surface* Graphics::loadImage(const std::string &filePath) {
-    if (this->_spriteSheets.count(filePath) == 0){
+    if (this->_spriteSheets.count(filePath) == 0) {
         this->_spriteSheets[filePath] = IMG_Load(filePath.c_str());
     }
     return this->_spriteSheets[filePath];
